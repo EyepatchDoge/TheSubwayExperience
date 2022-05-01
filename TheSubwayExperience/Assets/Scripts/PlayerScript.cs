@@ -12,11 +12,13 @@ public class PlayerScript : MonoBehaviour
     public float jumpHeight = 1.0f;
     private float gravityValue => Physics.gravity.y;
 
+    public GameManager gm;
     #endregion
     // Start is called before the first frame update
     void Start()
     {
         cc = GetComponent<CharacterController>();
+        gm.MouseOff();
     }
 
     // Update is called once per frame
